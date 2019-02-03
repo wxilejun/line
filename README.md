@@ -1,5 +1,6 @@
 # line
-这是一个简约的单栏模板
-版本 1.0
-单栏模板
-暂无后台设置功能
+* 简约而行 简便实用
+1. 支持代码高亮 (更多待更新)
+2. v1.0问世 作者将会持续维护模板
+* 预览
+![预览模板](https://raw.githubusercontent.com/wxilejun/line/master/screenshot.png)
