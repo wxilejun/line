@@ -6,7 +6,7 @@
 
 <footer id="footer" role="contentinfo">
     &copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
-    <?php _e('由 <a href="http://www.typecho.org">Typecho</a> 强力驱动'); ?>.
+    <?php _e('theme &nbsp; <a href="https://blog.yloli.cn">line</a><br><a href="http://www.typecho.org">Typecho</a>'); ?>.
 </footer><!-- end #footer -->
 
 <?php $this->footer(); ?>

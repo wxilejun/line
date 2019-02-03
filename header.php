@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/normalize.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/grid.css'); ?>">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/style.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/line.css'); ?>">
 
     <!--[if lt IE 9]>
     <script src="//cdnjscn.b0.upaiyun.com/libs/html5shiv/r29/html5.min.js"></script>
@@ -31,37 +32,14 @@
     <div class="browsehappy" role="dialog"><?php _e('当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>'); ?>.</div>
 <![endif]-->
 
-<header id="header" class="clearfix">
-    <div class="container">
-        <div class="row">
-            <div class="site-name col-mb-12 col-9">
-            <?php if ($this->options->logoUrl): ?>
-                <a id="logo" href="<?php $this->options->siteUrl(); ?>">
-                    <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
-                </a>
-            <?php else: ?>
-                <a id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
-        	    <p class="description"><?php $this->options->description() ?></p>
-            <?php endif; ?>
+<header>
+
+            <div class="container">
+                <p class="biaoti hs"><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a></p>
+                <p class="zhandianjieshao"><?php $this->options->description() ?></p>
+                <hr>
             </div>
-            <div class="site-search col-3 kit-hidden-tb">
-                <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
-                    <label for="s" class="sr-only"><?php _e('搜索关键字'); ?></label>
-                    <input type="text" id="s" name="s" class="text" placeholder="<?php _e('输入关键字搜索'); ?>" />
-                    <button type="submit" class="submit"><?php _e('搜索'); ?></button>
-                </form>
-            </div>
-            <div class="col-mb-12">
-                <nav id="nav-menu" class="clearfix" role="navigation">
-                    <a <?php if($this->is('index')): ?> class="current"<?php endif; ?> style="border: 1px solid #ddd; border-radius: 10px;" href="<?php $this->options->siteUrl(); ?>"><?php _e('首页'); ?></a>
-                    <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-                    <?php while($pages->next()): ?>
-                    <a<?php if($this->is('page', $pages->slug)): ?> class="current"<?php endif; ?> style="border: 1px solid #ddd; border-radius: 10px;" href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a>
-                    <?php endwhile; ?>
-                </nav>
-            </div>
-        </div><!-- end .row -->
-    </div>
+
 </header><!-- end #header -->
 <div id="body">
     <div class="container">

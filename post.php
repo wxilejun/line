@@ -23,5 +23,4 @@
     </ul>
 </div><!-- end #main-->
 
-<?php $this->need('sidebar.php'); ?>
 <?php $this->need('footer.php'); ?>
